@@ -1,0 +1,46 @@
+.section__footer{
+  background: url(../../assets/images/noise_transparent@2x.png),$color-background-gradientF;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+
+.footer__wrapper{
+  @include flex ( $justify: space-between)
+}
+
+.heading-footer{
+color: $color-light-xl;
+margin-bottom: 40px;
+}
+
+.footer__address{
+  padding-top: 16px;
+}
+
+.address-info{
+  display: inline-block;
+  color: $color-primary;
+  @include font (2rem, 115%);
+  letter-spacing: 0.06em;
+ 
+
+}
+
+.address-info__icon{
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: bottom;
+  &_tel{
+    vertical-align: middle;
+  }
+}
+.address-info__text{
+  display: inline-block;
+}
+.address-block{
+  >*{
+    display: block;
+    margin-bottom: 45px;
+  }
+}
+

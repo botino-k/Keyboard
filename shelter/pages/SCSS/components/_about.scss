@@ -1,0 +1,27 @@
+.about__wrapper {
+  @include flex(space-evenly, center);
+  min-height: 408px;
+}
+
+.about__content {
+  max-width: 430px;
+  margin-right: 55px;
+  & > * {
+    margin-bottom: 25px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+ 
+}
+
+.about__img {
+  min-width: 300px;
+  margin-left: 55px;
+}
+
+.about__text {
+  line-height: 160%;
+  color: $color-dark-xl;
+}
+

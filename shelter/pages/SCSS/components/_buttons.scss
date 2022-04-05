@@ -1,0 +1,41 @@
+.button{
+align-items: center;
+border-radius: 100px;
+@include font(1.7rem,130%);
+letter-spacing: 0.06em;
+color: $color-dark-3xl;
+@extend %transition;
+&:hover{
+  background: $color-primary-light;
+}
+&_colored{
+  padding: 15px 45px;
+  background: $color-primary;
+}
+&_bordered{
+ 
+  padding: 12px 42px;
+  border: 2px solid $color-primary;
+  &:hover{
+    border: 2px solid $color-primary-light;
+  }
+}
+&_circular{
+  min-width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+ 
+  &:hover{
+    border: 2px solid $color-primary-light;
+  }
+
+  &_arrow{
+    display: flex;
+    justify-content: center;
+    &_mirror{
+       transform: scaleX(-1);
+    }
+}
+}}
+
+

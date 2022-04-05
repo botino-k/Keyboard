@@ -1,0 +1,50 @@
+.section__pets{
+  background:$color-light-l;
+
+}
+.pets__wrapper{
+  text-align: center;
+}
+
+.pets__block{
+  @include flex(space-between, center);
+  padding-bottom: 60px;
+}
+
+.main-slider{
+  @include flex(space-between, center);
+  overflow: hidden;
+  flex-wrap: wrap;
+  flex-grow:  2;
+  max-width: 990px;
+  max-height: 435px;
+}
+
+
+.slider-card{
+  border-radius: 9px;
+  background-color:$color-light-s;
+  overflow: hidden;
+  cursor: pointer;
+>*  {margin-bottom: 30px;
+}
+&:hover{
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  .button_bordered{
+    background: $color-primary;
+    border: 2px solid $color-primary;
+    @extend %transition-fast;
+    &:hover{
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+    }
+  }
+}
+}
+
+.slider-card__name{
+  color: $color-dark-l;
+  @include font (2rem, 23px);
+  letter-spacing: 0.06em;
+}
+

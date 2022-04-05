@@ -1,0 +1,47 @@
+.header__wrapper {
+  @include flex(space-between, center);
+  position: absolute;
+  width: 100%;
+  top: 60px;
+}
+
+.navigation {
+  @include font(1.5rem, 160%);
+  @include flex();
+  font-family: "Arial";
+}
+
+.navigation__link {
+  padding-right: 36px;
+  color: $color-dark-s;
+  &_active{
+    color: $color-light-s;
+    display: inline-block;
+    border-bottom: 3px solid $color-primary;
+  }
+  &:last-child {
+    padding: 0;
+  }
+  a {
+    @extend %transition;
+    cursor: pointer;
+    &:hover {
+      color: $color-light-s;
+    }
+  }
+}
+
+.logo__text {
+  @include font(1.3rem, 15px);
+  font-family: "Arial";
+  color: $color-light-xl;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.logo__link {
+  @include font(3.2rem, 110%);
+  letter-spacing: 0.06em;
+  color: $color-primary;
+}
