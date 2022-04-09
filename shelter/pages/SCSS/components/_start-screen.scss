@@ -4,7 +4,7 @@
 }
 
 .start-screen__wrapper{
-  @include flex(space-between, center);
+  @include flex(space-between, center, wrap);
 }
 
 .start-screen__text {

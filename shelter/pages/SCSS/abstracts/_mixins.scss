@@ -5,8 +5,9 @@
   line-height: $height;
 }
 
-@mixin flex ( $justify: normal, $align-items: normal, $display:flex){
+@mixin flex ( $justify: normal, $align-items: normal, $flex-wrap:nowrap, $display:flex){
   display: $display;
   justify-content: $justify;
   align-items: $align-items;
+  flex-wrap: $flex-wrap;
 }

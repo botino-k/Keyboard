@@ -3,7 +3,7 @@
 }
 
 .donation__wrapper{
-  @include flex(space-between, normal);
+  @include flex(space-between, normal, wrap-reverse);
  max-width: 915px;
  margin: auto;
 }

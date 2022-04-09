@@ -3,33 +3,53 @@
   position: absolute;
   width: 100%;
   top: 60px;
+ 
+  &_pet-light-theme{
+    position: initial;
+    min-height: 120px;
+  }
 }
 
 .navigation {
   @include font(1.5rem, 160%);
   @include flex();
   font-family: "Arial";
+  color: $color-dark-s;
+  &_pet-light-theme{
+    color: $color-dark-l;
+  }
 }
 
-.navigation__link {
+.navigation__link-block {
   padding-right: 36px;
-  color: $color-dark-s;
-  &_active{
-    color: $color-light-s;
-    display: inline-block;
-    border-bottom: 3px solid $color-primary;
-  }
   &:last-child {
     padding: 0;
   }
-  a {
-    @extend %transition;
-    cursor: pointer;
-    &:hover {
-      color: $color-light-s;
-    }
-  }
 }
+
+.navigation__link {
+  @extend %transition;
+  @extend %cursor-hover;
+
+  &:hover {
+    color: $color-light-s;
+  }
+  &_pet-light-theme:hover {
+    color: $color-dark-3xl;}
+    &_pet-light-theme_active {
+      color: $color-dark-l;
+      display: inline-block;
+      border-bottom: 3px solid $color-primary;
+    
+    
+  }
+  &_active {
+    color: $color-light-s;
+    display: inline-block;
+    border-bottom: 3px solid $color-primary;
+  
+}}
+
 
 .logo__text {
   @include font(1.3rem, 15px);
@@ -38,10 +58,16 @@
   letter-spacing: 0.1em;
   margin-top: 10px;
   text-align: center;
+  &_pet-light-theme{
+    color: $color-dark-3xl;
+  }
 }
 
 .logo__link {
   @include font(3.2rem, 110%);
   letter-spacing: 0.06em;
   color: $color-primary;
+  &_pet-light-theme{
+    color: $color-dark-l;
+  }
 }

@@ -2,6 +2,7 @@
   background:$color-light-l;
 
 }
+
 .pets__wrapper{
   text-align: center;
 }
@@ -9,6 +10,7 @@
 .pets__block{
   @include flex(space-between, center);
   padding-bottom: 60px;
+
 }
 
 .main-slider{
@@ -22,10 +24,12 @@
 
 
 .slider-card{
+  max-width: 270px;
+  min-height: 435px;
   border-radius: 9px;
   background-color:$color-light-s;
   overflow: hidden;
-  cursor: pointer;
+  @extend %cursor-hover;
 >*  {margin-bottom: 30px;
 }
 &:hover{
@@ -48,3 +52,53 @@
   letter-spacing: 0.06em;
 }
 
+.pets-slider{
+display: grid;
+grid-template-columns: repeat(auto-fill,  minmax(270px, 1fr));
+gap: 30px 40px;
+justify-content: space-between;
+justify-items: center;
+max-height: 1365px;
+overflow: hidden;
+}
+
+.slider-nav{
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 60px;
+ 
+}
+.slider-nav__btn{
+  @include font (2rem, 115% );
+  letter-spacing: 0.06em;
+}
+
+.btn-arrow {
+
+  &_normal {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &_mirror {
+    transform: scale(-1, 1);
+  }
+
+
+}
+ 
+.btn-arrow-text{
+
+  &_inactive{
+
+  }
+  &_active{
+
+  }
+} 

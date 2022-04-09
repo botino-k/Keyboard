@@ -5,42 +5,47 @@
 }
 
 .footer__wrapper{
-  @include flex ( $justify: space-between)
+  @include flex ( $justify: space-between);
+  flex-wrap:wrap;
+
 }
+
+.footer__photo{
+
+}
+
 
 .heading-footer{
+@include font(3.5rem,130% );
+font-family: 'Georgia';
 color: $color-light-xl;
-margin-bottom: 40px;
+letter-spacing: 0.06em;
 }
 
-.footer__address{
-  padding-top: 16px;
+.address-block{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  height: 234px;
+  justify-content: space-between;
+  &:nth-child(2){
+    padding-right: 5px;
+      }
 }
 
 .address-info{
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: $color-primary;
   @include font (2rem, 115%);
   letter-spacing: 0.06em;
- 
-
 }
 
 .address-info__icon{
-  display: inline-block;
   padding-right: 20px;
-  vertical-align: bottom;
-  &_tel{
-    vertical-align: middle;
-  }
 }
+
 .address-info__text{
-  display: inline-block;
 }
-.address-block{
-  >*{
-    display: block;
-    margin-bottom: 45px;
-  }
-}
+
 

@@ -16,11 +16,14 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   min-height: 100vh;
   scroll-behavior: smooth;
+  cursor: url('../../../assets/cursor/Union.svg'), auto;
+ 
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  @extend %cursor-hover;
 }
 
 li {
@@ -44,7 +47,7 @@ button {
   font: inherit;
   color: inherit;
   background-color: transparent;
-  cursor: pointer;
+  @extend %cursor-hover;
 }
 
 h2 {
@@ -70,3 +73,4 @@ h3 {
   padding-top: 80px;
   padding-bottom: 100px;
 }
+
