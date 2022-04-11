@@ -10,6 +10,13 @@
   }
 }
 
+
+.header__sticky{
+  position: sticky;
+  top: 0;
+  background: $color-light-xl;
+}
+
 .navigation {
   @include font(1.5rem, 160%);
   @include flex();
