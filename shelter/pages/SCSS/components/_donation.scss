@@ -1,0 +1,60 @@
+.section__donation{
+  background:$color-light-l;
+}
+
+.donation__container{
+  @include flex(space-between, normal, wrap-reverse);
+ max-width: 915px;
+ margin: auto;
+}
+
+.donation__content{
+  >*{
+    margin-bottom: 20px;
+  }
+  :last-child{
+    margin-bottom: 0;
+  }
+max-width: 380px;
+}
+
+.donation__photo{
+  padding-top: 10px;
+}
+
+.donation__description{
+  @include  font (1.2rem, 1.8rem, $style:italic);
+color: $color-dark-m;
+}
+
+.donation-button{
+display: inline-flex;
+padding: 10px 15px;
+border-radius: 9px;
+background: $color-primary;
+@extend %transition;
+&:hover{
+  background: $color-primary-light;
+}
+}
+
+.donation-button__img{
+  max-height: 23px;
+  vertical-align: bottom;
+  margin-right: 14px;
+  display: inline-block;
+ 
+}
+
+.donation-button__number{
+  @include  font (2rem, 115%);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+.donation__bank{
+  @include  font (1.5rem, 110%);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

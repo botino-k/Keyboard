@@ -1,0 +1,22 @@
+.start-screen {
+  background: url(../../assets/images/noise_transparent@2x.png),$color-background-gradientH;
+  padding-top: 180px;
+}
+
+.start-screen__container{
+  @include flex(space-between, center, wrap);
+}
+
+.start-screen__text {
+  color: $color-dark-s;
+  margin: 42px 0;
+}
+
+.start-screen__content {
+  max-width: 460px;
+ padding-bottom: 80px;
+}
+
+.start-screen__header{
+  max-width: 310px;
+}

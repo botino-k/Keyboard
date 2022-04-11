@@ -1,0 +1,57 @@
+
+.help-list{
+  @include flex (center);
+  flex-wrap: wrap;
+  column-gap: 120px;
+ min-height: 281px;
+ max-width: 1030px;
+ margin: auto;
+ text-align: center;
+ align-content: space-between;
+ }
+
+.help-card__img{
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  margin-bottom:30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  &_food{
+    background-image: url(../../assets/icons/pet-food.svg);
+  }
+  &_transport{
+    background-image: url(../../assets/icons/transportation.svg);
+  }
+  &_toys{
+    background-image: url(../../assets/icons/toys.svg);
+  }
+  &_bowls{
+    background-image: url(../../assets/icons/bowls-and-cups.svg);
+  }
+  &_shampoos{
+    background-image: url(../../assets/icons/shampoos.svg);
+  }
+  &_vitamins{
+    background-image: url(../../assets/icons/vitamins.svg);
+  }
+  &_medicines{
+    background-image: url(../../assets/icons/medicines.svg);
+  }
+  &_collars{
+    background-image: url(../../assets/icons/collars-or-leashes.svg);
+  }
+  &_sleep{
+    background-image: url(../../assets/icons/sleeping-area.svg);
+  }
+
+}
+
+
+.help-card__name{
+  @include font (2rem, 115%);
+  letter-spacing: 0.06em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: $color-dark-l;
+}
+

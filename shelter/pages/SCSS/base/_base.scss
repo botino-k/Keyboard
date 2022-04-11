@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  cursor: url('../../../assets/cursor/Union.svg'), auto;
+ 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  @extend %cursor-hover;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  @include font(1.5rem, 160%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  @extend %cursor-hover;
+}
+
+h2 {
+  @include font(4.4rem, 130%);
+  color: $color-light-xl;
+}
+
+h3 {
+  @include font(3.5rem, 130%);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+
+.heading-center{
+  text-align: center;
+  max-width:400px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.section{
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+

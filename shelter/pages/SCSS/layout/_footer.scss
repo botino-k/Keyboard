@@ -1,0 +1,51 @@
+.section__footer{
+  background: url(../../assets/images/noise_transparent@2x.png),$color-background-gradientF;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+
+.footer__container{
+  @include flex ( $justify: space-between);
+  flex-wrap:wrap;
+
+}
+
+.footer__photo{
+
+}
+
+
+.heading-footer{
+@include font(3.5rem,130% );
+font-family: Georgia, "Times New Roman", Times, serif;
+color: $color-light-xl;
+letter-spacing: 0.06em;
+}
+
+.address-block{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  height: 234px;
+  justify-content: space-between;
+  &:nth-child(2){
+    padding-right: 5px;
+      }
+}
+
+.address-info{
+  display: inline-flex;
+  align-items: center;
+  color: $color-primary;
+  @include font (2rem, 115%);
+  letter-spacing: 0.06em;
+}
+
+.address-info__icon{
+  padding-right: 20px;
+}
+
+.address-info__text{
+}
+
+

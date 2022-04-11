@@ -1,0 +1,10 @@
+%transition{
+  transition: all .3s ease-out;
+}
+
+%transition-fast{
+  transition: all .1s ease-out;
+}
+
+%cursor-hover{
+  cursor: url('../../../assets/cursor/Hover.svg'), auto;}

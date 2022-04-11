@@ -1,0 +1,59 @@
+.button {
+  align-items: center;
+  border-radius: 100px;
+  @include font(1.7rem, 130%);
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  @extend %transition;
+
+  &_colored {
+    padding: 15px 45px;
+    background: $color-primary;
+    &:hover {
+      background: $color-primary-light;
+    }
+  }
+
+  &_bordered {
+    padding: 12px 42px;
+    border: 2px solid $color-primary;
+    &:hover {
+      border: 2px solid $color-primary-light;
+    }
+  }
+
+  &_circular {
+    min-width: 52px;
+    height: 52px;
+    border: 2px solid $color-primary;
+  
+    &_hover:hover {
+      background: $color-primary-light;
+      border: 2px solid $color-primary-light;
+      color: $color-dark-3xl;
+    }
+  
+    &:disabled {
+      border: 2px solid $color-dark-s;
+      color: $color-dark-s;
+      cursor: url('../../../assets/cursor/Union.svg'), auto;
+    }
+  
+    &_active {
+      background: $color-primary;
+      cursor: url('../../../assets/cursor/Union.svg'), auto;
+    }
+  
+  }
+}/*
+
+  /*background-image: url('../../../assets/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;*/
+
+
+
+
+
+
+
