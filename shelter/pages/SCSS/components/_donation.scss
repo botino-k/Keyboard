@@ -2,7 +2,7 @@
   background:$color-light-l;
 }
 
-.donation__wrapper{
+.donation__container{
   @include flex(space-between, normal, wrap-reverse);
  max-width: 915px;
  margin: auto;
@@ -28,7 +28,7 @@ color: $color-dark-m;
 }
 
 .donation-button{
-
+display: inline-flex;
 padding: 10px 15px;
 border-radius: 9px;
 background: $color-primary;
@@ -56,5 +56,5 @@ background: $color-primary;
   @include  font (1.5rem, 110%);
   letter-spacing: 0.06em;
   color: $color-dark-l;
-  font-family: 'Georgia';
+  font-family: Georgia, "Times New Roman", Times, serif;
 }

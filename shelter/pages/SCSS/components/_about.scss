@@ -1,4 +1,4 @@
-.about__wrapper {
+.about__container {
   @include flex(space-evenly, center, wrap-reverse);
   min-height: 408px;
 }

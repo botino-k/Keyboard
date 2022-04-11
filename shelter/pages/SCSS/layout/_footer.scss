@@ -4,7 +4,7 @@
   padding-bottom: 0;
 }
 
-.footer__wrapper{
+.footer__container{
   @include flex ( $justify: space-between);
   flex-wrap:wrap;
 
@@ -17,7 +17,7 @@
 
 .heading-footer{
 @include font(3.5rem,130% );
-font-family: 'Georgia';
+font-family: Georgia, "Times New Roman", Times, serif;
 color: $color-light-xl;
 letter-spacing: 0.06em;
 }

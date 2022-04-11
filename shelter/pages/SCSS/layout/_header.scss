@@ -1,4 +1,4 @@
-.header__wrapper {
+.header__container {
   @include flex(space-between, center);
   position: absolute;
   width: 100%;
@@ -13,7 +13,7 @@
 .navigation {
   @include font(1.5rem, 160%);
   @include flex();
-  font-family: "Arial";
+  font-family: Arial, Helvetica, sans-serif;
   color: $color-dark-s;
   &_pet-light-theme{
     color: $color-dark-l;
@@ -53,7 +53,7 @@
 
 .logo__text {
   @include font(1.3rem, 15px);
-  font-family: "Arial";
+  font-family: Arial, Helvetica, sans-serif;
   color: $color-light-xl;
   letter-spacing: 0.1em;
   margin-top: 10px;

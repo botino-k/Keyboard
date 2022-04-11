@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
   <link rel="stylesheet" href="../SCSS/style.css">
   <title>Our pets</title>
 </head>
@@ -12,16 +13,16 @@
 <body>
   <header class="header ">
     <div class="wrapper">
-      <div class="header__wrapper header__wrapper_pet-light-theme">
+      <div class="header__container header__container_pet-light-theme">
       <div class="logo">
-        <a href="#" class="logo__link  logo__link_pet-light-theme">Cozy House</a>
+        <a href="../main/index.html" class="logo__link  logo__link_pet-light-theme">Cozy House</a>
         <h1 class="logo__text logo__text_pet-light-theme">Shelter for pets in Boston</h1>
       </div>
       <nav class="header__navigation">
         <ul class="navigation navigation_pet-light-theme">
           <li class="navigation__link-block"><a class="navigation__link navigation__link_pet-light-theme" href="../main/index.html" >About the shelter</a></li>
           <li class="navigation__link-block"><a class="navigation__link navigation__link_pet-light-theme navigation__link_pet-light-theme_active" href="#pets">Our pets</a></li>
-          <li class="navigation__link-block"><a class="navigation__link navigation__link_pet-light-theme" href="#help">Help the shelter</a></li>
+          <li class="navigation__link-block"><a class="navigation__link navigation__link_pet-light-theme" href="../main/index.html#help">Help the shelter</a></li>
           <li class="navigation__link-block"><a class="navigation__link navigation__link_pet-light-theme" href="#contacts">Contacts</a></li>
         </ul>
       </nav>
@@ -31,7 +32,7 @@
   <main>
     <section class="section section__pets">
       <div class="wrapper">
-        <div class="pets__wrapper">
+        <div class="pets__container">
     
           <h3 class="heading-center">
             Our friends who <br>
@@ -81,11 +82,11 @@
             </article>
           </div>
           <div class="slider-nav">
-            <button class=" button button_circular button_circular_inactive "><span class="slider-nav__btn">&lt&lt </span>  </button>
-            <button class=" button button_circular button_circular_inactive"><span class="slider-nav__btn">&lt </span>  </button>
+            <button class=" button button_circular " disabled><span class="slider-nav__btn">&lt&lt </span>  </button>
+            <button class=" button button_circular " disabled><span class="slider-nav__btn">&lt </span>  </button>
             <button class=" button button_circular button_circular_active"><span class="slider-nav__btn">1 </span>  </button>
-            <button class=" button button_circular "><span class="slider-nav__btn"> &gt </span> </button>
-            <button class=" button button_circular "><span class="slider-nav__btn">&gt&gt </span>  </button>
+            <button class=" button button_circular button_circular_hover"><span class="slider-nav__btn"> &gt </span> </button>
+            <button class=" button button_circular button_circular_hover"><span class="slider-nav__btn">&gt&gt </span>  </button>
           </div>
 
         </div>
@@ -94,7 +95,7 @@
 
     <footer id="contacts" class="section section__footer">
       <div class="wrapper">
-      <div class="footer__wrapper">
+      <div class="footer__container">
           
           <address class="address-block">
             <div class="heading-footer">For questions<br> and suggestions</div>

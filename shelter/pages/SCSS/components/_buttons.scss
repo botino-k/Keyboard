@@ -22,24 +22,30 @@
     }
   }
 
-   &_circular {
+  &_circular {
     min-width: 52px;
     height: 52px;
     border: 2px solid $color-primary;
-    &:hover {
+  
+    &_hover:hover {
       background: $color-primary-light;
       border: 2px solid $color-primary-light;
       color: $color-dark-3xl;
     }
- &_inactive{
-  border: 2px solid $color-dark-s;
-  color: $color-dark-s;
- }
- &_active{
-  background: $color-primary;
- }
-
-  }/*
+  
+    &:disabled {
+      border: 2px solid $color-dark-s;
+      color: $color-dark-s;
+      cursor: url('../../../assets/cursor/Union.svg'), auto;
+    }
+  
+    &_active {
+      background: $color-primary;
+      cursor: url('../../../assets/cursor/Union.svg'), auto;
+    }
+  
+  }
+}/*
 
   /*background-image: url('../../../assets/icons/arrow.svg');
   background-repeat: no-repeat;
@@ -48,4 +54,6 @@
 
 
 
-}
+
+
+
