@@ -27,7 +27,7 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   min-height: 100vh;
   scroll-behavior: smooth;
-  cursor: url("../../../assets/cursor/Union.svg"), auto;
+  cursor: url("../../assets/cursor/Union.svg"), auto;
 }
 
 a {
@@ -112,6 +112,12 @@ h3 {
 .header__container_pet-light-theme {
   position: initial;
   min-height: 120px;
+}
+
+.header__sticky {
+  position: sticky;
+  top: 0;
+  background: #FFFFFF;
 }
 
 .navigation {
@@ -375,7 +381,7 @@ h3 {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("../../../assets/icons/arrow.svg");
+  background-image: url("../../assets/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -551,17 +557,11 @@ h3 {
 .button_circular:disabled {
   border: 2px solid #CDCDCD;
   color: #CDCDCD;
-  cursor: url("../../../assets/cursor/Union.svg"), auto;
+  cursor: url("../../assets/cursor/Union.svg"), auto;
 }
 .button_circular_active {
   background: #F1CDB3;
-  cursor: url("../../../assets/cursor/Union.svg"), auto;
+  cursor: url("../../assets/cursor/Union.svg"), auto;
 }
-
-/*
-
- /*background-image: url('../../../assets/icons/arrow.svg');
- background-repeat: no-repeat;
- background-position: center;*/
 
 /*# sourceMappingURL=style.css.map */
