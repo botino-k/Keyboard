@@ -7,7 +7,7 @@
 }
 
 .slider-card, .navigation__link, button, a {
-  cursor: url("../../../assets/cursor/Hover.svg"), auto;
+  cursor: url("../../assets/cursor/Hover.svg"), auto;
 }
 
 * {
