@@ -2,6 +2,10 @@
   max-width: 1280px;
   padding: 0 40px;
   margin: auto;
+  @include media-content {
+    padding: 0 calc(40px - ((1280px - 100vw) / 51.2));
+    }
+
 }
 .wrapper__abs{
   position: relative;

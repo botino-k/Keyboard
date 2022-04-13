@@ -62,15 +62,27 @@ h3 {
 }
 
 
-.heading-center{
+.heading-center {
   text-align: center;
-  max-width:400px;
+  max-width: 400px;
   margin: auto;
   margin-bottom: 60px;
+
+  &_our-pets {
+    @include media-content {
+      margin-bottom: calc(60px - ((1280px - 100vw) / 17.07));
+    }
+  }
 }
 
-.section{
+.section {
   padding-top: 80px;
   padding-bottom: 100px;
+
+  &_our-pets {
+    @include media-content {
+      padding-bottom: calc(100px - ((1280px - 100vw) / 21.33));
+    }
+  }
 }
 

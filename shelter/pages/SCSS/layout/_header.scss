@@ -3,7 +3,10 @@
   position: absolute;
   width: 100%;
   top: 60px;
- 
+  @include media-content {
+    top: calc(60px - ((1280px - 100vw) / 17.07));
+  }
+
   &_pet-light-theme{
     position: initial;
     min-height: 120px;

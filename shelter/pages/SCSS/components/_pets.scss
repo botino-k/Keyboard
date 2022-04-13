@@ -10,16 +10,19 @@
 .pets__block{
   @include flex(space-between, center);
   padding-bottom: 60px;
-
+  gap:12px;
 }
 
 .main-slider{
   @include flex(space-between, center);
   overflow: hidden;
-  flex-wrap: wrap;
   flex-grow:  2;
   max-width: 990px;
   max-height: 435px;
+  gap:12px;
+  @include media-laptop {
+  flex-wrap: wrap;
+  }
 }
 
 
@@ -61,6 +64,10 @@ justify-content: space-between;
 justify-items: center;
 max-height: 1365px;
 overflow: hidden;
+@include media-laptop {
+  margin: 0 auto;
+  max-width: 580px;
+}
 }
 
 .slider-nav{
@@ -69,7 +76,9 @@ overflow: hidden;
   justify-content: center;
   gap: 20px;
   padding-top: 60px;
- 
+  @include media-content {
+    padding-top: calc(60px - ((1280px - 100vw) / 25.6));
+  }
 }
 .slider-nav__btn{
   @include font (2rem, 115% );

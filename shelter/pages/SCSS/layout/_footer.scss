@@ -2,18 +2,27 @@
   background: url(../../assets/images/noise_transparent@2x.png),$color-background-gradientF;
   padding-top: 40px;
   padding-bottom: 0;
+
+  @include media-laptop {
+    padding-top: 15px;
+  }
 }
 
 .footer__container{
-  @include flex ( $justify: space-between);
-  flex-wrap:wrap;
-
+  @include flex ( space-around, $flex-wrap:wrap);
+ 
 }
 
 .footer__photo{
 
 }
-
+.footer__photo-block{
+  width: 100%;
+  @include media-laptop {
+    @include flex ( center);
+    padding-top: 65px;
+  }
+}
 
 .heading-footer{
 @include font(3.5rem,130% );
@@ -30,6 +39,9 @@ letter-spacing: 0.06em;
   justify-content: space-between;
   &:nth-child(2){
     padding-right: 5px;
+    @include media-laptop {
+      padding-right: 10px;
+    }
       }
 }
 

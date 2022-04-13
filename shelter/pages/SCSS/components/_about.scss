@@ -7,17 +7,26 @@
   max-width: 430px;
   margin-right: 55px;
   & > * {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     &:last-child{
       margin-bottom: 0;
+      @include media-laptop {
+        margin-bottom: 80px;
+       }
     }
   }
  
+  @include media-laptop {
+    margin-right: 0;
+   }
 }
 
 .about__img {
   min-width: 300px;
   margin-left: 55px;
+  @include media-laptop {
+    margin-left: 0;
+   }
 }
 
 .about__text {
