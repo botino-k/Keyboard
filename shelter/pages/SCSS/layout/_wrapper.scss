@@ -1,16 +1,18 @@
-.wrapper{
+.wrapper {
   max-width: 1280px;
   padding: 0 40px;
   margin: auto;
+
   @include media-content {
     padding: 0 calc(40px - ((1280px - 100vw) / 51.2));
-    }
- @include media-tablet {
-  padding: 0 calc(30px - ((768px - 100vw) / 22.4));
+  }
+
+  @include media-tablet {
+    padding: 0 calc(30px - ((768px - 100vw) / 22.4));
 
   }
 }
-.wrapper__abs{
-  position: relative;
- }
 
+.wrapper__abs {
+  position: relative;
+}

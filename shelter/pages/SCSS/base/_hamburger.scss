@@ -1,31 +1,31 @@
-
-
-.header__hamburger{
+.header__hamburger {
   @extend %cursor-hover;
   font-size: 0;
   display: none;
+
   @include media-tablet {
     display: inline-block;
-   }
+  }
 }
 
-.header__navigation{
+.header__navigation {
   @include media-tablet {
     display: none;
-   }
+  }
 }
 
-.hamburger{
+.hamburger {
   width: 30px;
 }
 
-.hamburger__line{
-display: inline-block;
-height: 2px;
-width: 100%;
-background-color: $color-primary;
-margin: 4px 0;
-&_pet-light-theme{
-  background-color: $color-dark;
-}
+.hamburger__line {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: $color-primary;
+  margin: 4px 0;
+
+  &_pet-light-theme {
+    background-color: $color-dark;
+  }
 }

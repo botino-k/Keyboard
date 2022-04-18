@@ -1,159 +1,128 @@
-.section__pets{
-  background:$color-light-l;
-
+.section__pets {
+  background: $color-light-l;
 }
 
-.pets__container{
+.pets__container {
   text-align: center;
 }
 
-.pets__block{
+.pets__block {
   @include flex(space-between, center);
   padding-bottom: 60px;
-  gap:12px;
-position: relative;
-  @include media-tablet {
-    padding-bottom: 114px;}
+  gap: 12px;
+  position: relative;
 
-  &>.button:first-child{
-    @include media-tablet {
-  position: absolute;
-  bottom: 42px;
-  left: calc(50% - 52px - 40px);
-    }
+  @include media-tablet {
+    padding-bottom: 114px;
   }
-  &>.button:last-child{
+
+  &>.button:first-child {
     @include media-tablet {
       position: absolute;
       bottom: 42px;
-  right: calc(50% - 52px - 40px);
+      left: calc(50% - 52px - 40px);
     }
   }
 
+  &>.button:last-child {
+    @include media-tablet {
+      position: absolute;
+      bottom: 42px;
+      right: calc(50% - 52px - 40px);
+    }
+  }
 }
 
-.main-slider{
- 
+.main-slider {
   overflow: hidden;
-  flex-grow:  2;
+  flex-grow: 2;
   max-width: 990px;
   height: 435px;
   position: relative;
-
- 
 }
 
-.main-slider__strip{
-position:absolute;
-width: 100%;
-top: 0;
-left: 0;
+.main-slider__strip {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   @include flex(space-between, center);
-  
-    /*v удалить после кроссчека*/
-    @include media-content {
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      gap: 25%;
-    }
-    @include media-laptop {
-      justify-content: space-between;
-      gap: 5%;
-    }
-    @include media-tablet {
-      justify-content: center;
-      gap: 25%;
-    }/*^ удалить после кроссчека*/
 }
 
-.main-slider__element{
-}
+.main-slider__element {}
 
-.slider-card{
+.slider-card {
   width: 270px;
   height: 435px;
   border-radius: 9px;
-  background-color:$color-light-s;
+  background-color: $color-light-s;
   overflow: hidden;
-  
   @extend %cursor-hover;
->*  {margin-bottom: 30px;
-}
-&:hover{
-  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-  background-color: $color-light-xl;
-  .button_bordered{
-    background: $color-primary;
-    border: 2px solid $color-primary;
-    @extend %transition-fast;
-    &:hover{
-    background: $color-primary-light;
-    border: 2px solid $color-primary-light;
+
+  >* {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background-color: $color-light-xl;
+
+    .button_bordered {
+      background: $color-primary;
+      border: 2px solid $color-primary;
+      @extend %transition-fast;
+
+      &:hover {
+        background: $color-primary-light;
+        border: 2px solid $color-primary-light;
+      }
     }
   }
+
+  @include media-content {
+    margin: 0 auto;
+  }
 }
-@include media-content {
-  margin: 0 auto;
-}
-}
 
-
-
-
-
-.slider-card__name{
+.slider-card__name {
   color: $color-dark-l;
   @include font (2rem, 23px);
   letter-spacing: 0.06em;
 }
 
-.pets-slider{
-display: grid;
-grid-template-columns: repeat(auto-fill,  minmax(270px, 1fr));
-gap: 30px 40px;
-justify-content: space-between;
-justify-items: center;
-max-height: 1365px;
-overflow: hidden;
-   /*v удалить после кроссчека*/
-   @include media-content {
-    grid-template-columns: repeat(auto-fill,  minmax(377px, 1fr));
-  }
+.pets-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 30px 40px;
+  justify-content: space-between;
+  justify-items: center;
+  max-height: 1365px;
+  overflow: hidden;
+
   @include media-laptop {
-    grid-template-columns: repeat(auto-fill,  minmax(270px, 1fr));
+    margin: 0 auto;
+    max-width: 580px;
   }
-  @include media-tablet {
-    grid-template-columns: repeat(auto-fill,  minmax(320px, 1fr));
-  }
-  @include media-mobile {
-    grid-template-columns: repeat(auto-fill,  minmax(270px, 1fr));
-  }
-  
-  /*^удалить после кроссчека*/
-@include media-laptop {
-  margin: 0 auto;
-  max-width: 580px;
 }
 
-
-}
-
-.slider-nav{
-
+.slider-nav {
   display: flex;
   justify-content: center;
   gap: 20px;
   padding-top: 60px;
+
   @include media-content {
     padding-top: calc(60px - ((1280px - 100vw) / 25.6));
   }
+
   @include media-tablet {
     gap: 10px;
     padding-top: 42px;
   }
 }
-.slider-nav__btn{
-  @include font (2rem, 115% );
+
+.slider-nav__btn {
+  @include font (2rem, 115%);
   letter-spacing: 0.06em;
 }
 
@@ -171,7 +140,4 @@ overflow: hidden;
   &_mirror {
     transform: scale(-1, 1);
   }
-
-
 }
- 
