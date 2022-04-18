@@ -11,3 +11,23 @@
   align-items: $align-items;
   flex-wrap: $flex-wrap;
 }
+
+@mixin media-content {
+@media ( max-width: $content-width) { @content; }
+}
+
+@mixin media-laptop {
+  @media ( max-width: $laptop-width) { @content; }
+  }
+
+@mixin media-tablet {
+@media ( max-width: $tablet-width) { @content; }
+}
+
+@mixin media-mobileL {
+  @media ( max-width: $mobileL-width) { @content; }
+}
+
+@mixin media-mobile {
+  @media ( max-width: $mobile-width) { @content; }
+}
