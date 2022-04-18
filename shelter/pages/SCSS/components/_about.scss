@@ -1,36 +1,67 @@
 .about__container {
   @include flex(space-evenly, center, wrap-reverse);
   min-height: 408px;
+  /*v удалить после кроссчека*/
+  @include media-content {
+    column-gap: 500px;
+  }/*^ удалить после кроссчека*/
+ 
 }
 
 .about__content {
   max-width: 430px;
   margin-right: 55px;
-  & > * {
+
+  &>* {
     margin-bottom: 24px;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
-      @include media-laptop {
+
+      /*@include media-laptop {
         margin-bottom: 80px;
-       }
+      }- расскомментить после кросчека*/
+
+      /*v удалить после кроссчека*/
+        @include media-content {
+        margin-bottom: 80px;
+      }/*^ удалить после кроссчека*/
+
+      @include media-mobile {
+        margin-bottom: 40px;
+      }
     }
   }
- 
+
   @include media-laptop {
     margin-right: 0;
-   }
+  }
 }
 
 .about__img {
-  min-width: 300px;
+
   margin-left: 55px;
   @include media-laptop {
     margin-left: 0;
    }
+   @include media-mobile {
+    max-width: 260px;
+  }
+
 }
 
 .about__text {
   line-height: 160%;
   color: $color-dark-xl;
+  @include media-mobile {
+    max-width: 270px;
+    text-align: justify;
+  }
+  /*v удалить после кроссчека*/
+  @include media-tablet {
+   
+    text-align: justify;
+  }
+  /*^ удалить после кроссчека*/
 }
 

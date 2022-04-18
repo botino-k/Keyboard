@@ -1,29 +1,58 @@
 
-.help-list{
+.help-list {
   @include flex (center);
   flex-wrap: wrap;
   column-gap: 120px;
- min-height: 281px;
- max-width: 1030px;
- margin: auto;
- text-align: center;
- align-content: space-between;
- @include media-content {
-  column-gap: 100px;
-}
- @include media-laptop {
-  column-gap: 0;
-  min-height: 449px;
-  max-width: 630px;
-  justify-content: space-between;
-}
- }
+  min-height: 281px;
+  max-width: 1030px;
+  margin: auto;
+  text-align: center;
+  align-content: space-between;
 
-.help-card{
+  @include media-content {
+    column-gap: 100px;
+  }
+
   @include media-laptop {
-  min-width: 170px;
+    column-gap: 0;
+    min-height: 449px;
+    max-width: 630px;
+    justify-content: space-between;
+  }
+
+  @include media-tablet {
+    gap: 30px;
+
+  }
+
+  @include media-mobileL {
+    justify-content: space-evenly;
+  }
+
+  @include media-mobile {
+    justify-content: space-between;
+   
   }
 }
+
+.help-card {
+  @include media-laptop {
+    min-width: 170px;
+  }
+
+  @include media-mobileL {
+    min-width: 130px;
+  }
+  &:nth-child(even){
+  @include media-mobile {
+    padding-right: 10px;
+  }
+ }
+ &:nth-child(odd){
+  @include media-mobile {
+    padding-left: 10px;
+  }
+}}
 
 
 .help-card__img{
@@ -60,7 +89,12 @@
   &_sleep{
     background-image: url(../../assets/icons/sleeping-area.svg);
   }
-
+  @include media-mobileL {
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    margin-bottom:20px;
+  }
 }
 
 
@@ -69,5 +103,9 @@
   letter-spacing: 0.06em;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: $color-dark-l;
+  @include media-mobileL {
+    font-size: 1.5rem;
+
+    }
 }
 

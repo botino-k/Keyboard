@@ -7,42 +7,72 @@
 }
 
 .start-screen__container{
-  @include flex(space-between, center/*, wrap*/);
-  @include media-laptop {
+  @include flex(space-between, center);
+
+  /*@include media-laptop {
     flex-wrap: wrap;
     justify-content: center;
-    }
+    }- расскомментить после кросчека*/
+
+    /*v удалить после кроссчека*/
+    @include media-content {
+    column-gap: 42px;
+    flex-wrap: wrap;
+    justify-content: center;
+    }/*^удалить после кроссчека*/
 }
 
 .start-screen__text {
   color: $color-dark-s;
   margin: 42px 0;
+
+  @include media-mobileL {
+    text-align: center;
+    }
+      /*v удалить после кроссчека*/
+      @include media-tablet {
+        text-align: center;
+        }/*^удалить после кроссчека*/
 }
 
 .start-screen__btn{
-  @include media-laptop {
+  /*@include media-laptop {
     text-align: center;
-  }
+  }- заменить после кросчека*/
+  @include media-content {
+    text-align: center;
+  }/*-удалить после кроссчека*/
 
 }
 
 .start-screen__content {
   max-width: 460px;
- padding-bottom: 80px;
- @include media-laptop {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+
+  @include media-laptop {
+    padding-bottom: 100px;
   }
 
+  @include media-mobile {
+    padding-bottom: 105px;
+  }
 }
 
 .start-screen__header{
   max-width: 310px;
+  @include media-tablet{
+    max-width: 100%;
+  }
 }
 
-.start-screen__photo{
+.start-screen__photo {
   @include media-laptop {
-  max-width: 569px;
-    }
+    max-width: 569px;
+  }
+
+  @include media-mobile {
+    max-width: 260px;
+  }
 }
 
 .start-screen__photo-block{
