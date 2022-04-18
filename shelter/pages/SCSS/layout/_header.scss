@@ -3,7 +3,18 @@
   position: absolute;
   width: 100%;
   top: 60px;
- 
+  @include media-content {
+    top: calc(60px - ((1280px - 100vw) / 17.07));
+  }
+
+  @include media-tablet {
+    top:  30px;
+  }
+  @include media-mobile {
+    max-width: 257px;
+  
+  }
+
   &_pet-light-theme{
     position: initial;
     min-height: 120px;

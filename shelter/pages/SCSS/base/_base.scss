@@ -53,24 +53,70 @@ button {
 h2 {
   @include font(4.4rem, 130%);
   color: $color-light-xl;
+
+  @include media-tablet {
+    font-size: calc(4.4rem - ((768px - 100vw) / 23.58));
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  }
+  @include media-mobile {
+    font-size: 25px;
+  }
 }
 
 h3 {
   @include font(3.5rem, 130%);
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include media-tablet {
+    font-size: calc(3.5rem - ((768px - 100vw) / 44.8));
+
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.06em;
+  }
 }
 
 
-.heading-center{
+.heading-center {
   text-align: center;
-  max-width:400px;
+  max-width: 400px;
   margin: auto;
   margin-bottom: 60px;
+
+
+  @include media-tablet {
+    margin-bottom: 40px;
+  }
+  
 }
 
-.section{
+.heading-center_our-pets {
+  @include media-content {
+    margin-bottom: calc(60px - ((1280px - 100vw) / 17.07));
+  }
+  @include media-mobileL {
+    margin-bottom: 42px;
+  }
+}
+
+
+
+.section {
   padding-top: 80px;
   padding-bottom: 100px;
+
+  &_our-pets {
+    @include media-content {
+      padding-bottom: calc(100px - ((1280px - 100vw) / 21.33));
+    }
+  }
+  @include media-mobileL {
+    padding-top: calc(80px - ((768px - 100vw) / 11.79));
+    padding-bottom: calc(100px - ((768px - 100vw) / 7.725));
+  }
+
 }
 
