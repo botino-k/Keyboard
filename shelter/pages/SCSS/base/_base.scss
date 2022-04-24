@@ -13,9 +13,15 @@ html {
 body {
   font-size: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
+  //min-height: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
   cursor: url('../../assets/cursor/Union.svg'), auto;
+
+
+}
+body._open-hamburger{
+  overflow: hidden;
 }
 
 a {
@@ -113,3 +119,21 @@ h3 {
     padding-bottom: calc(100px - ((768px - 100vw) / 7.725));
   }
 }
+
+.overlay{
+  opacity: 0;
+  position: fixed;
+  @extend %transition-fast;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-overlay;
+  pointer-events: none;
+  z-index: 3;
+  &_active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+

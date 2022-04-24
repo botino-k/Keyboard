@@ -1,9 +1,10 @@
 %transition{
-  transition: all .3s ease-out;
+  transition: 0.3s ease-out;
+  transition-property:  background-color, color, background, box-shadow;
 }
 
 %transition-fast{
-  transition: all .1s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 %cursor-hover{
