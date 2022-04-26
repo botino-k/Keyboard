@@ -1,7 +1,7 @@
 import { burger, mediaChangeTablet, closeBurgerByOverlay } from "./js/burger.js";
 import { pets } from "./js/pet-card.js";
 import { Article } from "./js/Article.js";
-import { generatePagination } from "./js/pagination.js";
+import { generatePagination , generatePaginationPetsSliderWrapper} from "./js/pagination.js";
 
 window.onload = function () {
   closeBurgerByOverlay();
@@ -10,8 +10,15 @@ window.onload = function () {
   if (pets) {
     renderArticlesToDom();
   }
-  generatePagination()
+  generatePagination();
+  generatePaginationPetsSliderWrapper();
 };
+
+
+
+
+
+
 
 const renderArticlesToDom = () => {
   if(window.innerWidth>=1280){
@@ -47,14 +54,5 @@ const renderArticlesToDom = () => {
 };//-подчищает main-slider__strip
 cleanMainSliderStrip()*/
 
-const generateArticles = (data) => {
-  let articles = [];
-  data.forEach((e) => {
-    articles.push(new Article(e));
-  });
-  console.dir(articles);
-  return articles;
-};//-получеем маасив с карточками
-generateArticles(pets);
 
 

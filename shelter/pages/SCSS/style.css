@@ -808,6 +808,13 @@ h3 {
   flex-wrap: nowrap;
   column-gap: 90px;
 }
+.main-slider__element {
+  display: none;
+}
+.main-slider__element_visible {
+  display: block;
+}
+
 .slider-card {
   width: 270px;
   height: 435px;
@@ -847,16 +854,24 @@ h3 {
 
 .pets-slider {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 30px 40px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  row-gap: 30px;
   justify-content: space-between;
   justify-items: center;
+  min-height: 930px;
   overflow: hidden;
+  margin: 0 auto;
 }
-@media (max-width: 1023.9px) {
+@media (max-width: 1279.9px) {
   .pets-slider {
-    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(270px, 1fr));
     max-width: 580px;
+  }
+}
+@media (max-width: 767.9px) {
+  .pets-slider {
+    grid-template-columns: repeat(1, minmax(270px, 1fr));
+    max-width: 270px;
   }
 }
 
