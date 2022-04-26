@@ -1,25 +1,19 @@
 .start-screen {
-  background: url(../../assets/images/noise_transparent@2x.png),$color-background-gradientH;
+  background: url(../../assets/images/noise_transparent@2x.png), $color-background-gradientH;
   padding-top: 180px;
+
   @include media-laptop {
     padding-top: 150px;
   }
 }
 
-.start-screen__container{
+.start-screen__container {
   @include flex(space-between, center);
 
-  /*@include media-laptop {
+  @include media-laptop {
     flex-wrap: wrap;
     justify-content: center;
-    }- расскомментить после кросчека*/
-
-    /*v удалить после кроссчека*/
-    @include media-content {
-    column-gap: 42px;
-    flex-wrap: wrap;
-    justify-content: center;
-    }/*^удалить после кроссчека*/
+  }
 }
 
 .start-screen__text {
@@ -28,21 +22,13 @@
 
   @include media-mobileL {
     text-align: center;
-    }
-      /*v удалить после кроссчека*/
-      @include media-tablet {
-        text-align: center;
-        }/*^удалить после кроссчека*/
+  }
 }
 
-.start-screen__btn{
-  /*@include media-laptop {
+.start-screen__btn {
+  @include media-laptop {
     text-align: center;
-  }- заменить после кросчека*/
-  @include media-content {
-    text-align: center;
-  }/*-удалить после кроссчека*/
-
+  }
 }
 
 .start-screen__content {
@@ -58,9 +44,10 @@
   }
 }
 
-.start-screen__header{
+.start-screen__header {
   max-width: 310px;
-  @include media-tablet{
+
+  @include media-tablet {
     max-width: 100%;
   }
 }
@@ -75,9 +62,10 @@
   }
 }
 
-.start-screen__photo-block{
+.start-screen__photo-block {
   @include media-laptop {
-   width: 100%;
+    width: 100%;
   }
+
   @include flex(flex-end);
 }

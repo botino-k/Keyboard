@@ -1,1 +1,58 @@
-//import {screenTest, screenTest2} from  './js/main-slider.js';
+import { burger, mediaChangeTablet, closeBurgerByOverlay } from "./js/burger.js";
+import { pets } from "./js/pet-card.js";
+import { Article } from "./js/Article.js";
+import { generatePagination , generatePaginationPetsSliderWrapper} from "./js/pagination.js";
+
+window.onload = function () {
+  closeBurgerByOverlay();
+  mediaChangeTablet();
+  burger();
+  if (pets) {
+    renderArticlesToDom();
+  }
+  generatePagination();
+  generatePaginationPetsSliderWrapper();
+};
+
+
+
+
+
+
+
+const renderArticlesToDom = () => {
+  if(window.innerWidth>=1280){
+    document.querySelectorAll(".main-slider__strip").forEach((e)=> {
+      e.innerHTML=`<div class="main-slider__element"></div>
+      <div class="main-slider__element"></div>
+      <div class="main-slider__element"></div>`
+    })
+  }else if(window.innerWidth<1280 && window.innerWidth>=768){
+    document.querySelectorAll(".main-slider__strip").forEach((e)=> {
+      e.innerHTML=`<div class="main-slider__element"></div>
+      <div class="main-slider__element"></div>`
+    })
+  }else{  document.querySelectorAll(".main-slider__strip").forEach((e)=> {
+    e.innerHTML=`<div class="main-slider__element"></div>`
+  })
+
+  }
+
+  /*let mainSliderWrapper = cleanMainSliderStrip();
+  generateArticles(pets).forEach((article) => {
+    mainSliderWrapper.append(article.generateArticle());
+  });*/
+};
+
+/*const cleanMainSliderStrip = () => {
+  const mainSliderStrip = document.querySelectorAll(".main-slider__strip");
+  mainSliderStrip.forEach((e) => {
+    e.innerHTML = "";
+  });
+ console.log(mainSliderStrip)
+  return mainSliderStrip;
+};//-подчищает main-slider__strip
+cleanMainSliderStrip()*/
+
+
+
