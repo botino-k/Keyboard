@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 100%;
-
 }
 
 html {
@@ -14,10 +13,15 @@ html {
 body {
   font-size: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
+  //min-height: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
   cursor: url('../../assets/cursor/Union.svg'), auto;
- 
+
+
+}
+body._open-hamburger{
+  overflow: hidden;
 }
 
 a {
@@ -56,11 +60,11 @@ h2 {
 
   @include media-tablet {
     font-size: calc(4.4rem - ((768px - 100vw) / 23.58));
-  margin: 0 auto;
-  text-align: center;
-  letter-spacing: 0.06em;
-
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.06em;
   }
+
   @include media-mobile {
     font-size: 25px;
   }
@@ -70,15 +74,14 @@ h3 {
   @include font(3.5rem, 130%);
   letter-spacing: 0.06em;
   color: $color-dark-l;
+
   @include media-tablet {
     font-size: calc(3.5rem - ((768px - 100vw) / 44.8));
-
-  margin: 0 auto;
-  text-align: center;
-  letter-spacing: 0.06em;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.06em;
   }
 }
-
 
 .heading-center {
   text-align: center;
@@ -86,23 +89,20 @@ h3 {
   margin: auto;
   margin-bottom: 60px;
 
-
   @include media-tablet {
     margin-bottom: 40px;
   }
-  
 }
 
 .heading-center_our-pets {
   @include media-content {
     margin-bottom: calc(60px - ((1280px - 100vw) / 17.07));
   }
+
   @include media-mobileL {
     margin-bottom: 42px;
   }
 }
-
-
 
 .section {
   padding-top: 80px;
@@ -113,10 +113,27 @@ h3 {
       padding-bottom: calc(100px - ((1280px - 100vw) / 21.33));
     }
   }
+
   @include media-mobileL {
     padding-top: calc(80px - ((768px - 100vw) / 11.79));
     padding-bottom: calc(100px - ((768px - 100vw) / 7.725));
   }
+}
 
+.overlay{
+  opacity: 0;
+  position: fixed;
+  @extend %transition-fast;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-overlay;
+  pointer-events: none;
+  z-index: 3;
+  &_active{
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
