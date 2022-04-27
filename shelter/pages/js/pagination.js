@@ -92,19 +92,19 @@ function generatePaginationPetsSliderWrapper() {
 
   const addCardsDependOnWidth = (width) => {
     countCards = width >= 1280 ? 8 : width < 1280 && width >= 768 ? 6 : 3;
-    document.querySelectorAll(".main-slider__element_visible").forEach((e) => {
+    document.querySelectorAll(".main-slider__element._visible").forEach((e) => {
       e.classList = "main-slider__element";
     });
     for (let i = 0; i < countCards; i++) {
-      petsSlider.children[i + countCards * (currentPage - 1)].classList =
-        "main-slider__element_visible";
+      petsSlider.children[i + countCards * (currentPage - 1)].classList.add( "_visible")
+       
     }
     return countCards;
   };
   addCardsDependOnWidth(window.innerWidth);
 
   const screenTest = () => {
-    document.querySelectorAll(".main-slider__element_visible").forEach((e) => {
+    document.querySelectorAll(".main-slider__element._visible").forEach((e) => {
       e.classList = "main-slider__element";
     });
     addCardsDependOnWidth(window.innerWidth);
