@@ -46,7 +46,7 @@ function generatePopup(){
 }
 
 
-   document.querySelectorAll(".main-slider__element").forEach((card) =>
+   document.querySelectorAll(".slider__element").forEach((card) =>
    card.addEventListener("click", () => {
        let petId = card.dataset.id;
        petsArr.forEach((e)=> {

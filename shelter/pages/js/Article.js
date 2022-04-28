@@ -10,7 +10,7 @@ export class Article {
   generateArticle() {
     let template = "";
     let sliderElement = document.createElement("div");
-    sliderElement.className = "main-slider__element";
+    sliderElement.className = "slider__element";
     sliderElement.setAttribute("data-id", this.id);
 
     if (this.id) {
