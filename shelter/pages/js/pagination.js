@@ -3,7 +3,7 @@ import { Article } from "./Article.js";
 
 function generatePagination() {
   let fullPetsArr = []; // 48
-  const petsSlider = document.querySelector(".pets-slider");
+  const petsSlider = document.querySelector(".pagination-slider");
 
   const cleanPetsSlider = () => {
     petsSlider.innerHTML = "";
@@ -63,12 +63,12 @@ function generatePagination() {
     });
   };
   renderArticlesToDom();
-  return document.querySelector(".pets-slider");
+  return document.querySelector(".pagination-slider");
 }
 
 function generatePaginationPetsSliderWrapper() {
   let countCards;
-  const petsSlider = document.querySelector(".pets-slider");
+  const petsSlider = document.querySelector(".pagination-slider");
   let currentPage = 1;
 
   const mediaTablet = window.matchMedia("(min-width: 768px)");
@@ -92,8 +92,8 @@ function generatePaginationPetsSliderWrapper() {
 
   const addCardsDependOnWidth = (width) => {
     countCards = width >= 1280 ? 8 : width < 1280 && width >= 768 ? 6 : 3;
-    document.querySelectorAll(".main-slider__element._visible").forEach((e) => {
-      e.classList = "main-slider__element";
+    document.querySelectorAll(".slider__element._visible").forEach((e) => {
+      e.classList = "slider__element";
     });
     for (let i = 0; i < countCards; i++) {
       petsSlider.children[i + countCards * (currentPage - 1)].classList.add( "_visible")
@@ -104,8 +104,8 @@ function generatePaginationPetsSliderWrapper() {
   addCardsDependOnWidth(window.innerWidth);
 
   const screenTest = () => {
-    document.querySelectorAll(".main-slider__element._visible").forEach((e) => {
-      e.classList = "main-slider__element";
+    document.querySelectorAll(".slider__element._visible").forEach((e) => {
+      e.classList = "slider__element";
     });
     addCardsDependOnWidth(window.innerWidth);
   };
