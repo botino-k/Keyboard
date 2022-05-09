@@ -6,16 +6,23 @@ export class Key {
 
   // Key generator
   generateKey() {
+    const lang = document.querySelector(".information-block").textContent
+   
+ 
     let template = "";
-    let rowElement = document.createElement("button");
-    rowElement.className = "key";
-    rowElement.setAttribute("data-code", this.code);
+    let keyElement = document.createElement("button");
+    keyElement.className = "key";
+    keyElement.setAttribute("data-code", this.code);
 
-    if (this.code) {
-      template += ` ${this.rest.en.keyShiftFalse}`;
-       }
-       rowElement.innerHTML = template;
-    return rowElement;
+    if (lang === 'en'){
+      template += ` ${this.rest.en.keyShiftFalse}`
+       } else {template += ` ${this.rest.ru.keyShiftFalse}`}
+       keyElement.innerHTML = template;
+       console.log (lang)
+    return keyElement;
+ 
+
   }
 
 }
+
