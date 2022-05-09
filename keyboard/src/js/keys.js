@@ -706,6 +706,13 @@ let controlRow = [
 ];
 
 function generateKeyBoardRow() {
+    const body=document.querySelector('body')
+    body.innerHTML=`<div class="information-block">en</div>
+    <div class="textarea-block">
+      <textarea class="textarea" placeholder="Click to start writing..." name="textarea" rows="5" cols="33" ></textarea>
+    </div>`
+
+
   const generateKeyCollection = (data) => {
     const keyBoardRow = [];
     data.forEach((e) => {

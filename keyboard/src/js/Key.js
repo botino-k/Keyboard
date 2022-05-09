@@ -20,8 +20,6 @@ export class Key {
        keyElement.innerHTML = template;
        console.log (lang)
     return keyElement;
- 
-
   }
 
 }
