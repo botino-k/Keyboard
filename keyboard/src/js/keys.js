@@ -842,78 +842,81 @@ function renderKeyBoardToDom() {
 }
 
 function handleClick() {
-  const textarea = document.querySelector("textarea");
-  const allKey = document.querySelectorAll(".key");
+   // const keyboard = document.querySelector(".keyboard");
+   // keyboard.addEventListener("click", e => console.dir(e.target))
 
-  textarea.addEventListener("focus", (e) => {
-    console.dir(e);
-    console.dir(textarea);
-  });
-
-  allKey.forEach((e) => {
-    e.addEventListener("click", (key) => {
-      const actualKey = e.dataset.code;
-      console.dir(e);
-    });
-  });
-
-  document.addEventListener("keydown", (e) => {
-    console.dir(e);
-  });
 }
+
+function animationKeyboardClick(){
+    const allKeys = document.querySelectorAll(".key");
+    document.addEventListener("keydown", (e) => {
+        allKeys.forEach((key) => {
+          if (e.code == key.dataset.code) {
+            key.classList.add("_active");
+          }
+        });
+      });
+    
+      document.addEventListener("keyup", (e) => {
+        allKeys.forEach((key) => {
+          if (e.code == key.dataset.code) {
+            key.classList.remove("_active");
+          }
+        });
+      }); 
+}
+
+function createLangChangeCommandBtn(){
+
+}
+
+
+
 
 function keyboardClick() {
   const allKeys = document.querySelectorAll(".key");
   const textarea = document.querySelector(".textarea");
- 
+  const row = document.querySelectorAll(".row");
+  const keyboard = document.querySelector(".keyboard");
 
-  textarea.addEventListener("keydown", (event) => {
+  const clickInputBtn = (event) => {
+    textarea.focus();
+    let ss = textarea.selectionStart;
+    let se = textarea.selectionEnd;
+    let ln = textarea.value.length;
+
     allKeys.forEach((key) => {
-      if (event.code == key.dataset.code && key.dataset.type == "inputBtn") {
+         if (
+        (event.target == key || event.code == key.dataset.code) &&
+        key.dataset.type == "inputBtn"
+      ) {
         event.preventDefault();
-        textarea.focus();
-        let ss = textarea.selectionStart;
-        let se = textarea.selectionEnd;
-        let ln = textarea.value.length;
-        let textBefore = textarea.value.substring(0, ss);
-        let textAfter = textarea.value.substring(se, ln);
-          if (ss == se  ) {
-            textarea.value =
-              textarea.value.substring(0, ss) + key.innerText + textarea.value.substring(se);
-              textarea.selectionStart = ss+1;
-              textarea.selectionEnd = se+1;
-          } 
-          else {
-            textarea.value = textBefore + key.innerText+ textAfter;
-            textarea.selectionStart = ss+2;
-            textarea.selectionEnd = ss+1;
-          }
-      }
-     
-    });
-    console.dir(textarea)
-  });
 
-
-  document.addEventListener("keydown", (e) => {
-    allKeys.forEach((key) => {
-      if (e.code == key.dataset.code) {
-        key.classList.add("_active");
-        console.dir(key)
-       /* if(key.dataset.type=='inputBtn')
-        {textarea.value+=key.innerText}*/
+        if (ss == se) {
+          textarea.value =
+            textarea.value.substring(0, ss) + key.innerText + textarea.value.substring(se);
+          textarea.selectionStart = ss + 1;
+          textarea.selectionEnd = se + 1;
+        } else {
+          textarea.value =
+            textarea.value.substring(0, ss) +
+            key.innerText +
+            textarea.value.substring(se, ln);
+          textarea.selectionStart = ss + 2;
+          textarea.selectionEnd = ss + 1;
+        }
       }
     });
-  });
+  };
 
-  document.addEventListener("keyup", (e) => {
-    allKeys.forEach((key) => {
-      if (e.code == key.dataset.code) {
-        key.classList.remove("_active");
-      }
-    });
-  });
+  textarea.addEventListener("keydown", clickInputBtn);
+  keyboard.addEventListener("click", clickInputBtn);
+
+
+
 }
+
+
 
 function activeBackspace() {
   const backspaceKey = document.querySelector(`[data-code="Backspace"]`);
@@ -924,8 +927,6 @@ function activeBackspace() {
     let se = textarea.selectionEnd;
     let ln = textarea.value.length;
 
-    let textBefore = textarea.value.substring(0, ss);
-    let textAfter = textarea.value.substring(se, ln);
 
     if (ss == se && ss !== 0) {
       textarea.value =
@@ -934,7 +935,7 @@ function activeBackspace() {
       textarea.selectionStart = ss - 1;
       textarea.selectionEnd = ss - 1;
     } else {
-      textarea.value = textBefore + textAfter;
+      textarea.value = textarea.value.substring(0, ss) + textarea.value.substring(se, ln);
       textarea.focus();
       textarea.selectionStart = ss;
       textarea.selectionEnd = ss;
@@ -946,4 +947,5 @@ function activeBackspace() {
 
 
 
-export { renderTextAreaToDom, renderKeyBoardToDom, handleClick, activeBackspace, keyboardClick };
+export { renderTextAreaToDom, renderKeyBoardToDom,animationKeyboardClick,  
+    handleClick, createLangChangeCommandBtn, activeBackspace, keyboardClick };
