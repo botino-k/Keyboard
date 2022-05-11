@@ -1,9 +1,11 @@
 
-import { generateKeyBoardRow} from "./js/keys.js";
-
+import {  renderTextAreaToDom, renderKeyBoardToDom, handleClick, activeBackspace, keyboardClick} from "./js/keys.js";
 window.onload = function () {
-  generateKeyBoardRow()
-  
+  renderTextAreaToDom()
+  renderKeyBoardToDom()
+  handleClick()
+  activeBackspace()
+  keyboardClick()
 }
 
 

@@ -13,7 +13,7 @@ export class Key {
     let keyElement = document.createElement("button");
     keyElement.className = "key";
     keyElement.setAttribute("data-code", this.code);
-
+    keyElement.setAttribute("data-type", this.rest.typeBtn);
     if (lang === 'en'){
       template += ` ${this.rest.en.keyShiftFalse}`
        } else {template += ` ${this.rest.ru.keyShiftFalse}`}
