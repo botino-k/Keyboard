@@ -7,39 +7,34 @@
   padding: 10px; 
   width: 100%;
   outline: none;
+  resize: none;
 }
 
-
-
 .keyboard{
-
   width: 100%;
   max-width: 800px;
   background-color: #f0f0f0;
 }
 
-
 .row{
 display: grid;
 
-&.keyboard__numbers-row{
+&.keyboard__numbersRow{
   grid-template-columns: repeat(13, 1fr) 1.5fr;
 }
-&.keyboard__tab-row{
+&.keyboard__letterRow1{
   grid-template-columns: 1.5fr repeat(13, 1fr) ;
 }
-&.keyboard__caps-row{
+&.keyboard__letterRow2{
   grid-template-columns: 1.75fr repeat(11, 1fr) 1.75fr;
 }
-&.keyboard__shift-row{
+&.keyboard__letterRow3{
   grid-template-columns: 2fr repeat(10, 1fr) 2fr;
 }
-&.keyboard__control-row{
+&.keyboard__controlRow{
   grid-template-columns: repeat(3, 1fr) 6.5fr repeat(5, 1fr) ;
 }
 }
-
-
 
 .key{
   background-color: #fff;

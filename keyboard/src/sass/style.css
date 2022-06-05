@@ -44,6 +44,7 @@ textarea {
   padding: 10px;
   width: 100%;
   outline: none;
+  resize: none;
 }
 
 .keyboard {
@@ -55,19 +56,19 @@ textarea {
 .row {
   display: grid;
 }
-.row.keyboard__numbers-row {
+.row.keyboard__numbersRow {
   grid-template-columns: repeat(13, 1fr) 1.5fr;
 }
-.row.keyboard__tab-row {
+.row.keyboard__letterRow1 {
   grid-template-columns: 1.5fr repeat(13, 1fr);
 }
-.row.keyboard__caps-row {
+.row.keyboard__letterRow2 {
   grid-template-columns: 1.75fr repeat(11, 1fr) 1.75fr;
 }
-.row.keyboard__shift-row {
+.row.keyboard__letterRow3 {
   grid-template-columns: 2fr repeat(10, 1fr) 2fr;
 }
-.row.keyboard__control-row {
+.row.keyboard__controlRow {
   grid-template-columns: repeat(3, 1fr) 6.5fr repeat(5, 1fr);
 }
 
