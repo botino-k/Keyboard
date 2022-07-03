@@ -7,6 +7,7 @@ import {
   renderKeyToDom,
   animationKeyboardClick,
   keyboardClick,
+  selectLanguage,
 } from "./js/keys-copy.js";
 
 window.onload = function () {
@@ -17,8 +18,9 @@ window.onload = function () {
   renderTextAreaToDom(),
   renderRowsCollectionToDom(),
   renderKeyToDom(language, shift),
-  animationKeyboardClick()
-  keyboardClick()
+  animationKeyboardClick(),
+  keyboardClick(),
+  selectLanguage()
 }
 
 

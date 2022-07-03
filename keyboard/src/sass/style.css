@@ -45,6 +45,7 @@ textarea {
   width: 100%;
   outline: none;
   resize: none;
+  white-space: pre-wrap;
 }
 
 .keyboard {

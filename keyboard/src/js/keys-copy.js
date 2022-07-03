@@ -2,14 +2,14 @@ import { Key } from "./Key.js";
 import { KeyRow } from "./Key.js";
 import { data } from "./data.js";
 
-const language = ["ru"];
+let language = ["ru"];
 const shift = ["keyShiftFalse"];
 
 function renderTextAreaToDom() {
   const body = document.querySelector("body");
   body.innerHTML = `<div class="information-block">en</div>
 <div class="textarea-block">
-  <textarea class="textarea" placeholder="Click to start writing..." name="textarea" rows="5" cols="33" ></textarea>
+  <textarea class="textarea" placeholder="Click to start writing..." name="textarea" rows="5" cols="20" ></textarea>
 </div>`;
 }
 
@@ -58,6 +58,19 @@ function renderKeyToDom(language, shift) {
   renderToDom(keys, keyboardRows);
 }
 
+function selectLanguage(){
+  const keyboard = document.querySelector(".keyboard")
+  const langBlock = document.querySelector(".information-block")
+langBlock.addEventListener("click", (e)=>{
+  language[0]="en";
+  renderTextAreaToDom()
+
+
+});
+}
+
+
+
 function animationKeyboardClick() {
   let dataCodeArr = [];
   for (let i of data) {
@@ -79,15 +92,16 @@ function animationKeyboardClick() {
 
 function getKeyPressValue(key) {
   let keyValue = key.code || key.target.dataset.code;
-  key.preventDefault();
+
   return keyValue;
 }
-
+//TODO change duble code for space and backspace
 function keyboardClick() {
   const keyboard = document.querySelector(".keyboard");
   const textarea = document.querySelector(".textarea");
 
   function clickInputBtn(e) {
+   
     textarea.focus();
     let keyCode = getKeyPressValue(e);
     let activeKey = document.querySelector(`[data-code=${keyCode}]`);
@@ -96,7 +110,10 @@ function keyboardClick() {
     let se = textarea.selectionEnd;
     let ln = textarea.value.length;
 
-    if (activeKey && activeKey.dataset.type == "inputBtn") {
+    console.dir(e)
+
+    if (!(e.altKey && e.ctrlKey && e.shiftKey) &&(activeKey && activeKey.dataset.type == "inputBtn")) {
+      e.preventDefault()
       let keyValue = activeKey.innerText;
 
       textarea.value =
@@ -132,10 +149,13 @@ function keyboardClick() {
       textarea.selectionStart = ss + 1;
       textarea.selectionEnd = ss + 1;
     }
+console.dir (textarea)
+console.log (textarea.value)
 
     console.dir(`'ss='${ss},      'se='${se},      'ln='${ln}`)
   }
 
+  
   document.addEventListener("keydown", clickInputBtn);
   keyboard.addEventListener("click", clickInputBtn);
 }
@@ -148,4 +168,5 @@ export {
   renderKeyToDom,
   animationKeyboardClick,
   keyboardClick,
+  selectLanguage,
 };
