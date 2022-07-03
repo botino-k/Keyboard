@@ -1,14 +1,28 @@
 
-import {  renderTextAreaToDom, renderKeyBoardToDom, animationKeyboardClick,  handleClick, createLangChangeCommandBtn, activeBackspace, keyboardClick} from "./js/keys.js";
+import {
+  language,
+  shift,
+  renderTextAreaToDom,
+  renderRowsCollectionToDom,
+  renderKeyToDom,
+  animationKeyboardClick,
+  keyboardClick,
+  selectLanguage,
+} from "./js/keys-copy.js";
+
 window.onload = function () {
-  renderTextAreaToDom()
-  renderKeyBoardToDom()
-  animationKeyboardClick()
-  handleClick()
-  createLangChangeCommandBtn()
-  activeBackspace()
-  keyboardClick()
+
+  language,
+  shift,
+
+  renderTextAreaToDom(),
+  renderRowsCollectionToDom(),
+  renderKeyToDom(language, shift),
+  animationKeyboardClick(),
+  keyboardClick(),
+  selectLanguage()
 }
+
 
 
 
